@@ -1,0 +1,23 @@
+.rmtTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.rmtTh {
+  padding: 0.5em;
+  border: 1px solid #999;
+  background-color: #ccc;
+  text-align: left;
+}
+.rmtTd {
+  padding: 0.5em;
+  border: 1px solid #999;
+}
+.rmtColumn {
+  display: flex;
+  flex-direction: column;
+}
+.rmtCaption {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
