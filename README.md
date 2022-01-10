@@ -7,7 +7,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Demo
-![alt text](./example/example.png)
+![alt text](https://raw.githubusercontent.com/Paraboly/react-matrix-table/main/example/example.png)
 
 Check example folder
 
