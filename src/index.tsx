@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import styles from './style.module.css';
-
+// TODO: Update type definitions
 interface ReactMatrixTableProps {
   rows: (number | string)[];
   columns: (number | string)[];
@@ -14,9 +14,9 @@ const ReactMatrixTable = ({
   data,
   cellColorFunction,
 }: ReactMatrixTableProps): JSX.Element => {
-  const getCellStyle = useCallback((
-    value: number | string
-  ): React.CSSProperties | undefined => {
+  const getCellStyle = useCallback((value: number | string):
+    | React.CSSProperties
+    | undefined => {
     if (cellColorFunction) {
       return {
         backgroundColor: cellColorFunction(value),
@@ -28,7 +28,7 @@ const ReactMatrixTable = ({
   const RmtHeader = (): JSX.Element => {
     return (
       <tr className="rmt-header">
-        <td></td>
+        <th></th>
         {columns.map((col, index) => (
           <th key={index} scope="col" className={styles.rmtTh}>
             {col}
@@ -61,15 +61,13 @@ const ReactMatrixTable = ({
     );
   };
   return (
-    <div id="rmt-container">
-      <table id="rmt-table" className={styles.rmtTable}>
-        <caption className={styles.rmtCaption}>Matrix:</caption>
-        <tbody>
-          <RmtHeader />
-          <RmtBody />
-        </tbody>
-      </table>
-    </div>
+    <table id="rmt-table" className={styles.rmtTable}>
+      <caption className={styles.rmtCaption}>Matrix:</caption>
+      <tbody>
+        <RmtHeader />
+        <RmtBody />
+      </tbody>
+    </table>
   );
 };
 
