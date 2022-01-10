@@ -7,6 +7,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Demo
+
 ![alt text](https://raw.githubusercontent.com/Paraboly/react-matrix-table/main/example/example.png)
 
 Check example folder
@@ -61,11 +62,11 @@ export default RmtExample;
 
 | Props             |                                  Definition                                  |                                  Type |   Default | Required |
 | ----------------- | :--------------------------------------------------------------------------: | ------------------------------------: | --------: | -------: |
-| caption           |                         Caption for the matrix table                         |                              `string` |         - |    false |
 | rows              |                              Matrix row labels                               |                            `string[]` |         - |     true |
 | columns           |                             Matrix column labels                             |                            `string[]` |         - |     true |
 | data              |                            Data for matrix cells                             |              `(string \| number)[][]` |         - |     true |
 | cellColorFunction | Cell color function which should return color code compatible with css color | `(value: number \| string) => string` | undefined |    false |
+| caption           |                         Caption for the matrix table                         |                              `string` |         - |    false |
 
 ## License
 

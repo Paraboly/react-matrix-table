@@ -6,6 +6,7 @@ interface ReactMatrixTableProps {
   columns: (number | string)[];
   data: (number | string)[][];
   cellColorFunction?: (value: number | string) => string;
+  caption?: string;
 }
 
 const ReactMatrixTable = ({
@@ -13,6 +14,7 @@ const ReactMatrixTable = ({
   columns,
   data,
   cellColorFunction,
+  caption,
 }: ReactMatrixTableProps): JSX.Element => {
   const getCellStyle = useCallback((value: number | string):
     | React.CSSProperties
@@ -62,7 +64,7 @@ const ReactMatrixTable = ({
   };
   return (
     <table id="rmt-table" className={styles.rmtTable}>
-      <caption className={styles.rmtCaption}>Matrix:</caption>
+      {caption && <caption className={styles.rmtCaption}>{caption}</caption>}
       <tbody>
         <RmtHeader />
         <RmtBody />
